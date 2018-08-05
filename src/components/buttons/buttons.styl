@@ -1,0 +1,41 @@
+.btn
+	background: white
+	color: #4eb7a8
+	text-transform: uppercase
+	font-weight: bold
+	width: 120px
+	height: 40px
+	border: 1px solid #4eb7a8
+	border-bottom: 4px solid
+	border-radius: 5px
+	cursor: pointer
+	transition: .3s
+	outline: none
+	position: relative
+
+	&:hover
+		background: #4eb7a8
+		color: white
+		border-bottom-color: #28A290
+
+/*  Ripple */
+
+.ripple {
+  width: 0;
+  height: 0;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.4);
+  transform: scale(0);
+  position: absolute;
+  opacity: 1;
+}
+.rippleEffect {
+    animation: rippleDrop .6s linear;
+}
+
+@keyframes rippleDrop {
+  100% {
+    transform: scale(2);
+    opacity: 0;
+  }
+}
