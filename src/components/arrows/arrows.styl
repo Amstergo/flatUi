@@ -1,0 +1,47 @@
+.arrow-container
+	display: flex
+
+	&__btn
+		width: 54px
+		height: 54px
+		border-radius: 50%
+		background: white
+		display: block
+		position: relative
+		cursor: pointer
+		box-shadow: inset 0 0 0px 3px #4eb7a8
+		transition: .3s
+
+		&:after
+			content: ''
+			border-bottom: 4px solid #4EB7A8
+			border-left: 4px solid #4EB7A8
+			position: absolute
+			left: 21px
+			top: 17px
+			width: 20px
+			height: 20px
+			transform: rotate(45deg)
+			transition: .3s
+
+		&:nth-child(odd):after
+			transform: rotate(45deg)
+
+		&:nth-child(even):after
+			left: 14px
+			transform: rotate(-134deg)
+
+		&:hover
+			background: #4EB7A8
+
+			&:after
+				border-color: white
+
+		&_disabled
+			background: gray
+			box-shadow: none
+			cursor: default
+			pointer-events: none
+
+			&:after
+				border-color: white
